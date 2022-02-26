@@ -35,6 +35,7 @@ import Hotel from "./maldives/resort/[hotel].svelte";
                     <!-- .site-banner__search__input -->
                 </form>
                 <!-- .site-banner__search -->
+                <!-- lets edit -->
                 <p class="site-banner__meta">
                     <!-- <span>Popular:</span>
                     {#await $hotels}
