@@ -78,7 +78,7 @@ const promise = getHotel();
                     </div>
                 </div> -->
                 <!-- .place-share -->
-                <div use:photo class="place-gallery">
+                <div class="place-gallery">
                     <a class="show-gallery" title="Gallery" >
                         <i class="la la-images la-24"></i>
                        Gallery
