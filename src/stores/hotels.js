@@ -4,7 +4,7 @@ export const hotels = writable([]);
 
 const fetcHotels = async () => {
 
-    const response = await fetch("http://localhost:4000/www.simplymaldivesholidays.co.uk/wp-admin/admin-ajax.php?action=resorts_list_all", {
+    const response = await fetch("https://www.simplymaldivesholidays.co.uk/wp-admin/admin-ajax.php?action=resorts_list_all", {
         headers: { 'x-requested-with': 'XMLHttpRequest' },
     });
 
