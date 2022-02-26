@@ -55,6 +55,7 @@ export const handle = async({ request, resolve }) => {
 // SvelteKit server-renders a page.
 // Sets session on client-side
 // try console logging session in routes' load({ session }) functions
+//hooks configured
 export const getSession = async(request) => {
     // Pass cookie with authenticated & email properties to session
     return request.locals.user ? {
