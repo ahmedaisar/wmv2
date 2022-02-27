@@ -4,7 +4,6 @@
     "scripts": {
         "dev": "svelte-kit dev",
         "special": "svelte-kit dev --host 0.0.0.0",
-        "build": "svelte-kit dev",
         "preview": "svelte-kit preview"
        
     },
