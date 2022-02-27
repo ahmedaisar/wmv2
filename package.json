@@ -5,8 +5,8 @@
         "dev": "svelte-kit dev",
         "special": "svelte-kit dev --host 0.0.0.0",
         "build": "svelte-kit dev",
-        "preview": "svelte-kit preview",
-        "proxy": "node proxy.cjs"
+        "preview": "svelte-kit preview"
+       
     },
     "devDependencies": {
         "@sveltejs/adapter-vercel": "^1.0.0-next.45",
