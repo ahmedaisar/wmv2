@@ -1,26 +1,26 @@
 <script lang="ts">
 
-import { page } from '$app/stores';
-import { onMount } from 'svelte';
+// import { page } from '$app/stores';
+// import { onMount } from 'svelte';
  
 
-onMount(async() => {
+// onMount(async() => {
  
 
-});
+// });
 
-const hotelname = $page.params.hotel;
-async function getHotel() {
+// const hotelname = $page.params.hotel;
+// async function getHotel() {
 
-let response = await fetch("http://localhost:4000/www.simplymaldivesholidays.co.uk/wp-admin/admin-ajax.php?action=resorts_list_all&url=resort/" + hotelname, {
-    headers: {'x-requested-with': 'XMLHttpRequest'}
-});
+// let response = await fetch("http://localhost:4000/www.simplymaldivesholidays.co.uk/wp-admin/admin-ajax.php?action=resorts_list_all&url=resort/" + hotelname, {
+//     headers: {'x-requested-with': 'XMLHttpRequest'}
+// });
 
-let hotels = await response.json();
-return hotels;
-}
+// let hotels = await response.json();
+// return hotels;
+// }
 
-const promise = getHotel();
+// const promise = getHotel();
 
 
 
@@ -30,18 +30,18 @@ const promise = getHotel();
 </script>
  
 
- 
+<!--  
   {#await promise}
     <p>Loading...</p>
   {:then hotel}
- 
+  -->
 
   
       <main id="main" class="site-main place-04">
         <div class="place">
             <div class="slick-sliders">
                 <div class="slick-slider photoswipe" data-item="1" data-arrows="false" data-itemScroll="1" data-dots="false" data-infinite="true" data-centerMode="false" data-centerPadding="0">
-                    {#if hotel[0].pictures }
+                    <!-- {#if hotel[0].pictures }
                            {#each hotel[0].pictures as gallery}
                                 <div class="place-slider__item photoswipe-item">
                                     <a href="{gallery.url}" data-height="900" data-width="1200" data-caption="{gallery.name}"></a>
@@ -51,7 +51,7 @@ const promise = getHotel();
                          
                     {:else}
                         <div class="place-slider__item"><a href="#"><img src="https://via.placeholder.com/1280x500?text=WMV" alt="slider no image"></a></div>
-                    {/if}
+                    {/if} -->
                 </div>
                 <!-- <div class="place-share">
                     <a title="Save" href="#" class="add-wishlist @if($place->wish_list_count) remove_wishlist active @else @guest open-login @else add_wishlist @endguest @endif" data-id="{{$place->id}}">
@@ -142,14 +142,14 @@ const promise = getHotel();
                     <div class="col-lg-8">
                         <div class="place__left">
                             <ul class="place__breadcrumbs breadcrumbs">
-                                <li><a title="{hotel[0].name}" href="/">{hotel[0].name}</a></li>
+                                <!-- <li><a title="{hotel[0].name}" href="/">{hotel[0].name}</a></li> -->
                                 <!-- @foreach($categories as $cat)
                                     <li><a href="{{route('page_search_listing', ['category[]' => $cat->id])}}" title="{{$cat->name}}">{{$cat->name}}</a></li>
                                 @endforeach -->
                             </ul>
                             <!-- .place__breadcrumbs -->
                             <div class="place__box place__box--npd">
-                                <h1>{hotel[0].name}</h1>
+                                <!-- <h1>{hotel[0].name}</h1> -->
                                 
                                 <div class="place__meta">
                                     <div class="place__reviews reviews">
@@ -169,7 +169,7 @@ const promise = getHotel();
                             <div class="place__box place__box-overview">
                                 <h3>Overview</h3>
                                 <div class="place__desc">
-                                    {hotel[0].overview}
+                                    <!-- {hotel[0].overview} -->
                                 </div><!-- .place__desc -->
                                 <a href="#" class="show-more" title="Show more">Show more</a>
                             </div>
@@ -396,6 +396,6 @@ const promise = getHotel();
         <!-- .similar-places -->
     </main><!-- .site-main -->
  
-  {:catch error}
+  <!-- {:catch error}
     <p style="color: red">{error.message}</p>
-  {/await}
+  {/await} -->
