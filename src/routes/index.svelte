@@ -1,7 +1,7 @@
 <script context="module">
     import Login from "$lib/Login.svelte";
     import Register from "$lib/Register.svelte";
-    import { hotels } from "../stores/hotels";
+    // import { hotels } from "../stores/hotels";
     import { goto } from "$app/navigation";
 import Hotel from "./maldives/resort/[hotel].svelte";
 
@@ -63,7 +63,7 @@ import Hotel from "./maldives/resort/[hotel].svelte";
         <div class="container">
             <h2 class="cities__title title">Popular hotels</h2>
             <div class="cities__content">
-                {#await $hotels}
+                <!-- {#await $hotels}
                     <div class="golo-loading-effect">
                         <span class="golo-dual-ring" />
                     </div>
@@ -107,7 +107,7 @@ import Hotel from "./maldives/resort/[hotel].svelte";
                     </div>
                 {:catch error}
                     <p style="color: red">{error.message}</p>
-                {/await}
+                {/await} -->
             </div>
             <!-- .cities__content -->
         </div>
